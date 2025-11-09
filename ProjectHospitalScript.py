@@ -252,7 +252,8 @@ def employee_management():
             else:
                 print("Not proper designation chosen")
                 continue
-        new_entry = {"empid": empid, "name": name1, "designation": desig, "specialty": spec}
+        pwd=input("Enter password")
+        new_entry = {"empid": empid, "name": name1, "designation": desig, "specialty": spec, "password": pwd}
         with open("emp_master.dat", "ab+") as f:
             try:
                 pickle.dump(new_entry, f)
@@ -291,9 +292,9 @@ def employee_management():
                 pass
         data=[]
         for e in emplist:
-            d1=[e["empid"], e["name"] ,e["designation"], e["specialty"]]
+            d1=[e["empid"], e["name"] ,e["designation"], e["specialty"], e["password"]]
             data.append(d1)
-        headers= ["Employee ID", "Name", "Designation", "Speciality"]
+        headers= ["Employee ID", "Name", "Designation", "Speciality", "Password"]
         print(tabulate(data, headers=headers, tablefmt="grid"))
         return employee_management()
     elif ch == "4":
@@ -706,6 +707,7 @@ def remove_account():
 
 while True:
     ui_1()
+
 
 
 
