@@ -233,9 +233,25 @@ def employee_management():
             if emp["empid"] == empid:
                 print("\033[0;3m2Employee ID already exists!\033[0m")
 
-        spec = input("Enter employee specification: ")
+        b=0
+        while b==0:
+            spec = input("Enter employee specification (Cardiologist/Neurologist/Nephrologist/Orthologist/Gynocologist/Surgeon/Medicine & Put N/A IF EMPLOYEE IS NOT DOCTOR): ")
+            if spec=="Cardiologist" or spec=="Neurologist" or spec=="Nephrologist" or spec=="Orthologist" or spec=="Gynocologist" or spec=="Surgeon" or spec=="Medicinal" or spec=="N/A":
+                b=b+1
+                break
+            else:
+                print("Not proper speciality chosen")
+                continue
         name1 = input("Enter employee name: ")
-        desig = input("Enter employee designation: ")
+        a=0
+        while a==0:
+            desig = input("Enter employee designation: ")
+            if desig=="Doctor" or desig=="Nurse" or desig=="Janitor" or desig=="Receptionist":
+                a=a+1
+                break
+            else:
+                print("Not proper designation chosen")
+                continue
         new_entry = {"empid": empid, "name": name1, "designation": desig, "specialty": spec}
         with open("emp_master.dat", "ab+") as f:
             try:
@@ -315,8 +331,24 @@ def patient_management():
         Gender = input("Enter Gender (M/F): ")
         BG = input("Enter Blood Group: ")
         DOA = input("Enter Date of Admission: ")
-        WT = input("Enter type of ward (ICU/GENERAL)")
-        Field = input("Enter type of doctor needed: ")
+        g= 0
+        while g == 0:
+            WT = input("Enter type of ward (ICU/ITU/ICCU/A&E/SURGICAL/GERIARTRIC/MATERNITY/ONCOLOGY/GENERAL)")
+            if WT == "ICU" or WT == "ITU" or WT == "ICCU" or WT == "A&E" or WT == "SURGICAL" or WT == "GERIATRIC" or WT == "MATERNITY" or WT == "ONCOLOGY" or WT == "GENERAL":
+                g = g + 1
+                break
+            else:
+                print("Not proper ward chosen (Capitalise all letters if you are choosing one from options")
+                continue
+        b = 0
+        while b == 0:
+            Field = input("Enter type of Doctor needed(Cardiologist/Neurologist/Nephrologist/Orthologist/Gynocologist/Surgeon/Medicine): ")
+            if Field == "Cardiologist" or Field == "Neurologist" or Field == "Nephrologist" or Field == "Orthologist" or Field== "Gynocologist" or Field== "Surgeon" or Field == "Medicinal":
+                b = b + 1
+                break
+            else:
+                print("Branch not chosen properly (Capitalise (1st letter if you are choosing one from options)")
+                continue
         c=0
         while c==0 :
             Doc_ID = input("Enter doctor id: ")
@@ -674,5 +706,6 @@ def remove_account():
 
 while True:
     ui_1()
+
 
 
