@@ -542,7 +542,7 @@ def inventory_management():
         for w in wardlist:
             if w["WardNo"] == wt:
                 w["nob"]=i["nob"]-1
-                with open("inventory_dir.dat.dat", "wb") as f:
+                with open("inventory_dir.dat", "wb") as f:
                     for w in wardlist:
                         pickle.dump(w, f)
                         print("\033[0;33mWard updated!\033[0m")
