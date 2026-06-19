@@ -557,7 +557,7 @@ def inventory_management():
                 pass
         data=[]
         for w in wardlist:
-            d1=[w["WardNo"], w["WT"] ,i["nob"], i["BF"], i["Con"]]
+            d1=[w["WardNo"], w["WT"] ,w["nob"], w["BF"], w["Con"]]
             data.append(d1)
         headers= ["WardNo", "WardType", "No of Beds available", "Ward Full/NotFull", "Contagious"]
         print(tabulate(data, headers=headers, tablefmt="grid"))
