@@ -84,7 +84,7 @@ def login():
         return None
 
 def ui_1():
-    print("Welcome to Diptayan Memorial Hospital")
+    print("Welcome to Ritayan Memorial Hospital")
     print("1. Administrator login")
     print("2. Register new admin account")
     print("3. Employee login")
@@ -215,7 +215,7 @@ def change_password_emp():
     return emp_menu()
 
 def employee_management():
-    print("\033[0;36Employee Management: \033[0m")
+    print("\033[0;36mEmployee Management: \033[0m")
     print("1. Create new entry")
     print("2. Remove employee")
     print("3. View all entries")
@@ -305,7 +305,7 @@ def employee_management():
 
 
 def patient_management():
-    print ("\033[0;36Patient Management: \033[0m")
+    print ("\033[0;36mPatient Management: \033[0m")
     print("1. Create new entry")
     print("2. Remove patients")
     print("3. Change ward type")
@@ -490,7 +490,7 @@ def patient_management():
         return menu()
 
 def inventory_management():
-    print("\033[0;Inventory Management: \033[0m")
+    print("\033[0;mInventory Management: \033[0m")
     print("1. Add ward or no of beds available in the ward")
     print("2. Make one less bed filled in a ward")
     print("3. View all entries")
@@ -570,7 +570,7 @@ def inventory_management():
 
 
 def pharmacy_management():
-    print("\033[0;36Pharmacy Management: \033[0m")
+    print("\033[0;36mPharmacy Management: \033[0m")
     print("1. Add item")
     print("2. Remove item")
     print("3. View all entries")
