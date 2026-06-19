@@ -9,6 +9,8 @@ file = open(r"patient_dir.dat", "ab+")
 file.close()
 file = open(r"inventory_dir.dat", "ab+")
 file.close()
+file = open(r"pharmacy_dir.dat", "ab+")
+file.close()
 cur_uid = ''
 
 def register_new():
