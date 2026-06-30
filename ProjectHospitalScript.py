@@ -543,7 +543,7 @@ def inventory_management():
         wt=input("Enter item ID of item to be removed: ")
         for w in wardlist:
             if w["WardNo"] == wt:
-                w["nob"]=i["nob"]-1
+                w["nob"]=w["nob"]-1
                 with open("inventory_dir.dat", "wb") as f:
                     for w in wardlist:
                         pickle.dump(w, f)
